@@ -1,0 +1,71 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[english,french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{color}
+
+\title{MEMO TEXMAKER}
+\author{krystof}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Configuration de \textbf{TexMaker}}
+La configuration est accessible via: \textbf{Options --> Configurer Texmaker}.
+
+C'est par cette entrée qu'il est possible de configurer l'éditeur, les commandes associées à \LaTeX, ou la vérification orthographique.
+
+\section{Rédiger un document à l'aide de l'éditeur}
+Pour ce qui est des commandes usuelles il suffit de se reporter au menu \textbf{Édition}.
+
+Pour créer le préambule de son document \LaTeX on peut passer par l'assistant: \textbf{Assistants --> Assistant nouveau document}.
+
+Structuration du document: à l'aide de la touche \textbf{$|+$} de la barre d'outils.
+
+Espacement et saut de ligne: \textbf{LaTeX --> Espacement}.
+
+Les listes: \textbf{LaTeX --> Listes}.
+
+Les tableaux: \textbf{Assistants --> Assistant tableau}.
+
+Les tabulations: \textbf{Assistants --> Assistant tabulation}.
+
+Les références croisées: le bouton \textbf{ref} de la barre d'outils.
+
+Il est possible de naviguer d'une marque (petit rond plein) à une autre (marques  automatiquement insérées par certaines commandes) à l'aide de la touche \textbf{Tab} (\textbf{Shift + Tab} pour revenir en arrière).
+
+\section{Compilation du document}
+\subsection*{Compiler son document}
+Rapidement via \textbf{Exécuter} (Petit symbole \textit{run}).
+
+Via le menu \textbf{Outils} pour choisir la méthode de compilation.
+
+Effacer tous les fichiers générés par \LaTeX (sauf les fichiers \textbf{.tex} et \textbf{.pdf}): \textbf{Outils --> Nettoyer}.
+
+\subsection*{Les fichiers de \textbf{log}}
+Un clic sur la colonne \textbf{Line} permet d'atteindre directement la ligne dans l'éditeur.
+
+\subsection*{Synchronisation \textbf{source-pdf} avec \textbf{synctex}}
+Il faut pour cela ajouter l'option \textbf{\og -synctex=1\fg{}} à la commande pour \textbf{pdflatex}. L'afficheur \textbf{pdf} intégré se positionnera directement à la page correspondante à la ligne courante dans l'éditeur.
+
+Réciproquement, avec un clic droit sur un mot dans l'afficheur \textbf{pdf} intégré, apparaît un menu contextuel. \textbf{Cliquer pour aller à la ligne correspondante} amènera le curseur dans le fichier source au niveau du mot correspondant.
+
+\section{Autres caractéristiques de \textbf{Texmaker}}
+\subsection*{Replier/Déplier les blocs d'un document}
+A l'aide des touches \textbf{-} et \textbf{+} situées dans la marge.
+
+Un clic droit sur la première ligne d'un bloc permet de sélectionner \textbf{Aller à la fin d'un bloc} pour positionner le curseur sur la dernière ligne d'un bloc.
+
+\subsection*{Documents scindés en plusieurs fichiers}
+Inclure un fichier \textbf{.tex} dans son document: \verb|LaTeX --> *\include{file}|. Par la vue \textbf{Structure}, un clic droit sur le nom du fichier permet de l'ouvrir.
+
+Définir ensuite le document racine (ou maître) \textbf{Options --> Définir le document courant comme le document \og maître\fg{}}. Toute compilation se fera non pas à partir du document ouvert mais bien à partir du document maître, même si ce dernier est fermé. Le menu \textbf{Options} permet aussi de revenir en mode \og normal\fg{} en désactivant la définition du document maître.
+
+\subsection*{Bibliographies}
+Les références bibliographiques peuvent être réinitialisés via l'option \textbf{Édition --> Rafraîchir bibliographie}.
+
+\textbf{Texmaker} facilite la rédaction d'un fichier de bibliographie (au format standard \textbf{.bib} à l'aide du menu \textbf{Bibliographie}. Un clic sur un item de ce menu insère directement le code standard associé à ce style de bibliographie. Les commandes optionnelles signalées par \textbf{OPT} sont automatiquement effacées par la commander \textbf{Nettoyer} du menu \textbf{Bibliographie}. Il faut donc effacer le \textbf{OPT} pour les conserver.
+
+\end{document}
